@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title th:text="${reviewModel.name}">A review</title>
+    <link rel="stylesheet" href="/style.css"/>
+    <title th:text="${reviewModel.name}">One Piece Review</title>
 </head>
 <body>
 
 <header>
-    <h1 th:text="${reviewModel.name}">A review</h1>
+    <h1 th:text="${reviewModel.name}">One Piece Review</h1>
 </header>
 
 <main>
-    <ul>
-        <p><a href="/reviews">Reviews</a></p>
-        <li th:text="${reviewModel.name}"></li>
+    <img th:src="${reviewModel.imgUrl}" alt="Pictures" class="pictures">
+    <article class="article__review">
+    <p th:text="${reviewModel.description}"></p>
+    </article>
+    <ul class="review_tab">
+        <p class="review_tabItem"><a href="/reviews">Reviews</a></p>
     </ul>
-    <h2 th:text="${reviewModel.description}"></h2>
 </main>
 
 <footer>
-    <small>&copy Victor 2022</small>
+    <small class="foot">&copy Victor Grullon 2022</small>
 </footer>
 
 </body>
