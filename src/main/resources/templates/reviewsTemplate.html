@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css"/>
+    <title>One Piece Saga Reviews</title>
+</head>
+<body>
+
+<header class="header">
+    <h1>One Piece Sagas</h1>
+</header>
+
+<main>
+    <nav class="nav">
+        <ul class="nav__list">
+        <li class="nav_listItem" th:each="review: ${reviewsModel}"><a th:href="@{/review(id=${review.id})}" th:text="${review.name}"></a></li>
+        </ul>
+    </nav>
+</main>
+
+<footer>
+    <small class="foot">&copy Victor Grullon 2022</small>
+</footer>
+</body>
+</html>

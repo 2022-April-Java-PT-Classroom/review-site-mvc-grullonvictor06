@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/style.css"/>
+    <title th:text="${reviewModel.name}">One Piece Review</title>
+</head>
+<body>
+
+<header>
+    <h1 th:text="${reviewModel.name}">One Piece Review</h1>
+</header>
+
+<main>
+    <img th:src="${reviewModel.imgUrl}" alt="Pictures" class="pictures">
+    <article class="article__review">
+    <p th:text="${reviewModel.description}"></p>
+    </article>
+    <ul class="review_tab">
+        <p class="review_tabItem"><a href="/reviews">Reviews</a></p>
+    </ul>
+</main>
+
+<footer>
+    <small class="foot">&copy Victor Grullon 2022</small>
+</footer>
+
+</body>
+</html>
